@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Архитектура. ШРИ-2018</title>
+        <link rel="stylesheet" href="app/css/style.css">
+    </head>
+    <body>
+        <h1>Архитектура приложения</h1>
+        <div class="application-container">
+            <div class="view-stub">
+                <div id="testForm" class="view-stub__input-block">
+                    <input class="view-stub__input"/>
+                    <button class="view-stub__apply">Отправить на сервер</button>
+                </div>
+                <p class="view-stub__label"> Здесь появится ответ сервера</p>
+            </div>
+            <div class="log">
+                <h4>Лог событий:</h4>
+                <ol class="log-list"></ol>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="dist/main.bundle.js"></script>
+    </body>
+</html>
