@@ -13,7 +13,7 @@ export default class View {
 
     addListeners() {
         this.appViewEl.querySelector('.view-stub__input')
-            .addEventListener('keydown', this.keyPressed.bind(this));
+            .addEventListener('keyup', this.keyPressed.bind(this));
 
         this.appViewEl.querySelector('.view-stub__apply')
             .addEventListener('click', this.buttonClicked.bind(this));
@@ -21,6 +21,7 @@ export default class View {
 
     keyPressed() {
         this.logger.log('Пользователь изменил содержимое input.');
+        this.presenter.keyPressed();
     }
 
     buttonClicked() {
@@ -30,6 +31,10 @@ export default class View {
 
     getUserInput() {
         return this.appViewEl.querySelector('.view-stub__input').value;
+    }
+
+    setUserInput(val) {
+        return this.appViewEl.querySelector('.view-stub__input').value = val;
     }
 
     addLogRecord(logElement) {
